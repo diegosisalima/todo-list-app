@@ -1,0 +1,123 @@
+/*!Home*/
+.home {
+  min-height: calc(90vh - var(--h-header) - var(--h-user-card));
+  padding: 0 1rem;
+}
+@media screen and (min-width: 900px) {
+  .home {
+    min-height: calc(100vh - var(--h-header) - var(--h-user-card));
+  }
+}
+.home__proyects {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/*!FrmSignUp FrmLogin*/
+.frm-container-modal {
+  min-width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(20px) brightness(0.4);
+  -webkit-backdrop-filter: blur(20px) brightness(0.4);
+  z-index: 100;
+}
+.frm-container-modal__btn-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: larger;
+  cursor: pointer;
+}
+.frm-container-modal__btn-close:hover {
+  cursor: pointer;
+}
+.frm-sign-up {
+  --width-form: 350px;
+  --bg-frm: var(--first-color);
+  --frm-bg-input-color: var(--first-color);
+  --frm-text-color: var(--text-color);
+  width: var(--width-form);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.frm-sign-up__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.frm-sign-up__input-item {
+  color: var(--frm-text-color);
+  height: 2.5rem;
+  padding-left: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 0%;
+  background-color: var(--frm-bg-input-color);
+  font-size: 16px;
+}
+.frm-sign-up__input-item:focus {
+  border: 1px solid var(--first-color);
+}
+.frm-sign-up__a {
+  text-decoration: underline;
+}
+/*!Tasks*/
+.tasks {
+  padding: 0 1rem;
+}
+@media screen and (min-width: 900px) {
+  .tasks {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+}
+.tasks__section-project {
+  display: flex;
+  justify-content: space-between;
+}
+.tasks__project-title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.tasks__project-description {
+  font-size: small;
+  opacity: 0.6;
+}
+.tasks__icon {
+  font-size: 1.5rem;
+}
+.tasks__icon-trash {
+  color: #e12729;
+}
+.tasks__ul {
+  background-color: #f1ddbf;
+  margin-top: 0.5rem;
+  min-height: 400px;
+  color: var(--second-color);
+  font-family: "Gochi Hand", cursive;
+  padding: 1rem;
+}
+/*!acerca*/
+.acerca {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.acerca__icon {
+  font-size: 3rem;
+  color: var(--first-color);
+}
+.acerca__title {
+  text-transform: uppercase;
+}
+.acerca__created {
+  opacity: 0.4;
+}

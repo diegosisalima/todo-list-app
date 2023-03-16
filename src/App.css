@@ -1,0 +1,43 @@
+/*//!App*/
+.App {
+  position: relative;
+}
+/*//!Header*/
+.header {
+  position: fixed;
+  background-color: var(--first-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  height: var(--h-header);
+  width: 100%;
+  z-index: 90;
+}
+.bx-menu {
+  display: none;
+}
+.header__account {
+  display: flex;
+  gap: 0.5rem;
+}
+/*//!AccountData*/
+.account-data {
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: var(--h-header);
+  background-color: var(--first-color);
+  padding: 1rem 0.5rem;
+}
+.account-data--hiden {
+  transform: translateX(100%);
+}
+.account-data--show {
+  transform: translateX(0%);
+}
+.account-data__logout {
+  font-size: x-small;
+  text-decoration: underline;
+  cursor: pointer;
+}

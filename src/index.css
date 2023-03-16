@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Gochi+Hand&family=Secular+One&display=swap");
+:root {
+  /* font-family: "Gochi Hand", cursive; */
+  font-family: "Bubblegum Sans", cursive;
+  --text-color: #ecf0f1;
+  --first-color: #183e4b;
+  --second-color: #161a20;
+  --light-color: #0bbc65;
+  --mx-wd-container: 1280px;
+  /* color-scheme: light dark; */
+  background-color: #242424;
+
+  --h-header: 40px;
+  --h-user-card: 150px;
+  --w-aside: 260px;
+}
+/** RESETEOS */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+body {
+  overflow-x: hidden;
+  color: var(--text-color);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+input {
+  outline: 0;
+  font-family: inherit;
+}
+h1 {
+  font-size: 3.2em;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+}
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+button {
+  border: 1px solid transparent;
+  padding: 0.4em 0.8em;
+  font-family: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: inherit;
+  border: 1px solid;
+}
+button:hover {
+  border-color: #0bbc6560;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+/** UTILIDADES */
+.mx-wd-container {
+  margin: 0 auto;
+  max-width: var(--max-width-container);
+}
+.img-item {
+  border: solid 1px #d1dbe4;
+  width: 300px;
+  height: 300px;
+}
+.img-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* object-position: bottom right; */ /*en caso de que object-fit: cover; esto ayuda a posicionar la imagen que es visible*/
+}
+.grid-galery {
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 300px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-flow: dense;
+}
+.filter {
+  backdrop-filter: blur(12px);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.hero-image-filter {
+  width: 100%;
+  min-height: 100vh;
+  backdrop-filter: blur(4px) brightness(0.4);
+}
+.page-height {
+  width: 100%;
+  min-height: 100vh;
+  /* min-height: calc(100vh - 40px); */
+  text-align: center;
+  /* border: 1px solid chocolate; */
+}
+/*!utilities*/
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  min-width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(20px) brightness(0.4);
+  -webkit-backdrop-filter: blur(20px) brightness(0.4);
+  /* display: none; */
+  z-index: 100;
+}
+.cursor:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
